@@ -27,7 +27,7 @@ This document provides a series of test cases to be used for validating an IAM p
 }
 ```
 
-Test Case 2: Invalid Policy with Single Asterisk Resource
+## Test Case 2: Invalid Policy with Single Asterisk Resource
 
 ```json
 {
@@ -46,7 +46,7 @@ Test Case 2: Invalid Policy with Single Asterisk Resource
 }
 ```
 
-Test Case 3: Valid Policy with Conditional Statement
+## Test Case 3: Valid Policy with Conditional Statement
 
 ```json
 {
@@ -68,7 +68,7 @@ Test Case 3: Valid Policy with Conditional Statement
 }
 ```
 
-Test Case 4: Policy with Missing Version Field
+## Test Case 4: Policy with Missing Version Field
 
 ```json
 {
@@ -86,7 +86,7 @@ Test Case 4: Policy with Missing Version Field
 }
 ```
 
-Test Case 5: Policy with Missing Statement Field
+## Test Case 5: Policy with Missing Statement Field
 
 ```json
 {
