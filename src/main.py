@@ -1,24 +1,27 @@
-from policy_loader import PolicyLoader
-from policy_validator import PolicyValidator
+from utils import load_policy_from_file
+from validations import validate_policy, validate_structure
+import sys
 
 
 def main():
-    file_path = 'policy.json'  # Adjust the file path as needed
+    file_path = sys.argv[1]
+
+    if not file_path:
+        raise ValueError("File path is required.")
+
     try:
-        loader = PolicyLoader(file_path)
-        policy_data = loader.load_policy()
+        policy_data = load_policy_from_file(file_path)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"File not found: {file_path}")
 
-        # Extract just the PolicyDocument for validation
-        policy_document = policy_data.get('PolicyDocument')
-        if policy_document is None:
-            raise ValueError("Missing 'PolicyDocument' in loaded JSON.")
+    is_valid_policy = validate_policy(policy_data)
 
-        validator = PolicyValidator(policy_document)
-        is_valid = validator.validate_policy()
+    if is_valid_policy:
+        print("Policy is valid.")
+    else:
+        print("Policy is invalid.")
 
-        print("Policy validation passed." if is_valid else "Policy validation failed.")
-    except Exception as e:
-        print(f"An error occurred: {str(e)}")
+    return is_valid_policy
 
 
 if __name__ == '__main__':

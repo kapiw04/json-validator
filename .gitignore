@@ -1,3 +1,7 @@
 .venv
 src/__pycache__/
 policy.json
+rename_files.sh
+.vscode/
+tests/__pycache__
+.pytests_cache/

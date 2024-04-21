@@ -1,0 +1,12 @@
+{
+    "PolicyName": "InvalidMissingAction",
+    "PolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": {
+        "Sid": "Stmt1",
+        "Effect": "Allow",
+        "Resource": "arn:aws:s3:::example_bucket"
+      }
+    }
+  }
+  

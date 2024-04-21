@@ -1,0 +1,7 @@
+{
+    "PolicyName": "InvalidMissingStatement",
+    "PolicyDocument": {
+      "Version": "2012-10-17"
+    }
+  }
+  

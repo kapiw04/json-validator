@@ -1,0 +1,12 @@
+{
+    "PolicyName": "InvalidMissingVersion",
+    "PolicyDocument": {
+      "Statement": {
+        "Sid": "Stmt1",
+        "Effect": "Allow",
+        "Action": "s3:ListBucket",
+        "Resource": "arn:aws:s3:::example_bucket"
+      }
+    }
+  }
+  
