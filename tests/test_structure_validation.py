@@ -1,5 +1,5 @@
 from src.validations import validate_structure
-from src.utils import load_policy_from_file
+from src.main import load_policy_from_file
 
 
 def test_validate_valid_structure_multiple_statements():

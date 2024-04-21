@@ -1,5 +1,5 @@
 from src.validations import validate_policy
-from src.utils import load_policy_from_file
+from src.main import load_policy_from_file
 
 
 def test_valid_policy_multiple_statements():

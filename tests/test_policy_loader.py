@@ -1,4 +1,4 @@
-from src.utils import load_policy_from_file
+from src.main import load_policy_from_file
 import pytest  # type: ignore
 import json
 
