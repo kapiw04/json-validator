@@ -1,6 +1,5 @@
 from src.validations import validate_policy
 from src.utils import load_policy_from_file
-import pytest  # type: ignore
 
 
 def test_valid_policy_multiple_statements():

@@ -7,12 +7,14 @@ def main():
     file_path = sys.argv[1]
 
     if not file_path:
-        raise ValueError("File path is required.")
+        print("Please provide a file path as an argument.")
+        return None
 
     try:
         policy_data = load_policy_from_file(file_path)
     except FileNotFoundError:
-        raise FileNotFoundError(f"File not found: {file_path}")
+        print("File was not found or is not correct. Please make sure the file you provided is a valid JSON file.")
+        return None
 
     is_valid_policy = validate_policy(policy_data)
 

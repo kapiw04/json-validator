@@ -32,3 +32,9 @@ def test_fail_on_invalid_json():
     path = "tests/cases/invalid_json.json"
     with pytest.raises(json.JSONDecodeError):
         load_policy_from_file(path)
+
+
+def test_not_a_json():
+    path = "tests/cases/not_a_json"
+    with pytest.raises(json.JSONDecodeError):
+        load_policy_from_file(path)

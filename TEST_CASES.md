@@ -255,6 +255,12 @@
         "Effect": "Allow",
         "Action": ["s3:GetObject"],
         "Resource": "arn:aws:s3:::example_bucket/all/*"
+      },
+      {
+        "Sid": "Stmt3",
+        "Effect": "Allow",
+        "Action": ["s3:PutObject"],
+        "Resource": ["**", "***"]
       }
     ]
   }
@@ -290,7 +296,6 @@
 // {
 ""
 // }
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 ```
 
 ## Test Case 17: empty
